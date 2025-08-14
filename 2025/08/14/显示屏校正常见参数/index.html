@@ -16,8 +16,8 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="John Doe">
-  <meta name="keywords" content="C,嵌入式">
+  <meta name="author" content="Windiy">
+  <meta name="keywords" content="C,嵌入式，PCB">
   
     <meta name="description" content="显示屏校正常见参数   对于不同接收卡，界面显示的性能参数不同，主要包括以下:视觉刷新频率:显示屏更新画面的速率。提升刷新频率可减少画面闪烁，使图像更稳定。灰度级数:屏体显示明暗程度的参数，灰度级数越大，显示屏亮度等级切分越细腻。例如灰度级数为 16bit 时可表达 65536 级亮度明暗程度。灰度模式:灰度显示方式，可设为亮度优先、刷新率优先、灰度优先或性能均衡。 DCLK 频率:移位时钟的">
 <meta property="og:type" content="article">
@@ -32,8 +32,8 @@
 <meta property="og:image" content="c:\Users\U0015071\AppData\Roaming\Typora\typora-user-images\image-20250812114407754.png">
 <meta property="article:published_time" content="2025-08-14T02:31:45.328Z">
 <meta property="article:modified_time" content="2025-08-12T03:52:30.791Z">
-<meta property="article:author" content="John Doe">
-<meta property="article:tag" content="C,嵌入式">
+<meta property="article:author" content="Windiy">
+<meta property="article:tag" content="C,嵌入式，PCB">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="c:\Users\U0015071\AppData\Roaming\Typora\typora-user-images\image-20250812111324520.png">
   
@@ -103,7 +103,7 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>Fluid</strong>
+      <strong>Windiy</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -391,7 +391,7 @@
       
         <div class="license-meta-item">
           <div>作者</div>
-          <div>John Doe</div>
+          <div>Windiy</div>
         </div>
       
       
@@ -491,6 +491,12 @@
 
 
   
+
+
+  
+  
+
+
 
 
 
@@ -703,6 +709,49 @@ setInterval("createtime()",250);
 
 
   <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
 
   <script  src="/js/local-search.js" ></script>
 
